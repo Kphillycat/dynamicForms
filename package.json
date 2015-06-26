@@ -1,0 +1,29 @@
+{
+  "name": "dynamic_angular_forms",
+  "version": "1.0.0",
+  "description": "Different ways to dynamically generate different input elements based on type definition from external source",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kphillycat/dynamicForms.git"
+  },
+  "keywords": [
+    "forms",
+    "inputs",
+    "angular",
+    "dynamic",
+    "formly"
+  ],
+  "author": "Keith Williams Jr. (Kphillycat)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kphillycat/dynamicForms/issues"
+  },
+  "homepage": "https://github.com/Kphillycat/dynamicForms#readme",
+  "dependencies": {
+    "angular": "^1.4.1"
+  }
+}

@@ -1,0 +1,1 @@
+To run just type ```npm install``` and go cray!!! (╯°□°）╯︵ ┻━┻
