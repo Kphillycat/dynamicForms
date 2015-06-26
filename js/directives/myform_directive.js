@@ -14,14 +14,17 @@
                 type: "@"
             },
             link: function(scope, element, attrs) {
-                    if (attrs.type && attrs.type == "text") {
-                        element.html($sce.trustAsHtml("<input type=text /> <br /> <br />"));
-                    }
-                    if (attrs.type && attrs.type == "select") {
-                        element.html($sce.trustAsHtml("<select><option value='One'>One</option></select> <br /> <br />"));
-                    }
-                    if (attrs.type && attrs.type == "file") {
-                        element.html($sce.trustAsHtml("<input type=file /> <br /> <br />"));
+                    switch (attrs.type) {
+                        case "select":
+                            element.html($sce.trustAsHtml("<select><option value='One'>One</option></select> <br /> <br />"));
+                            break;
+                        case "file":
+                            element.html($sce.trustAsHtml("<input type=file /> <br /> <br />"));
+                            break;
+                        case "text":
+                        default:
+                            element.html($sce.trustAsHtml("<input type=text /> <br /> <br />"));
+                            break;
                     }
                     element.on('click', function(){
                         element.addClass('Linked');

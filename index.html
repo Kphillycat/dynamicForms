@@ -11,10 +11,14 @@
     <script src="js/directives/myfileselect_directive.js"></script>
 </head>
 <body ng-app="dynamicFormsApp" ng-controller="ctrl as c">
-    
+    <div> Using the directive </div>
     <my-form type="text"></my-form>
     <my-form type="select"></my-form>
     <my-form type="file"></my-form>
+    <my-form></my-form> <!-- I ain't go no type -->
+
+    <div> Using the JSON AND directa-ma-tives ANNNNNNDDDD ng-repeat</div>
+    <my-form ng-repeat="formType in c.types" type="{{formType.type}}"></my-form>
 
     <!-- Using ng-if to create the elements -->
     <!-- <div ng-if="c.type === 'text'">

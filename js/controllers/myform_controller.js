@@ -4,7 +4,30 @@
 (function(){
     angular.module('dynamicFormsApp', []).controller('ctrl', formsCtrl);
 
-    function formsCtrl(){
-        this.type = "text";
+    formsCtrl.$inject = ['$http'];
+
+    var data = [
+		{
+			"type" : "text"
+		},
+		{
+			"type" : "text"
+		},
+		{
+			"type" : "text"
+		},
+		{
+			"type" : "select"
+		},
+		{
+			"type" : "file"
+		}
+	]
+
+    function formsCtrl($http){
+        this.types = data;
+        // $http.get('data.json').success(function(data) {
+        // 	this.types = data;
+        // });
     }
 })();
