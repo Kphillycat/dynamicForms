@@ -10,7 +10,13 @@
     <script src="js/directives/myfileselect_directive.js"></script>
 </head>
 <body ng-app="dynamicFormsApp" ng-controller="ctrl as c">
-    <div ng-if="c.type === 'text'">
+    
+    <my-form type="text"></my-form>
+    <my-form type="select"></my-form>
+    <my-form type="file"></my-form>
+
+    <!-- Using ng-if to create the elements -->
+    <!-- <div ng-if="c.type === 'text'">
         <my-form></my-form>
     </div>
     <div ng-if="c.type === 'select'">
@@ -18,7 +24,7 @@
     </div>
     <div ng-if="c.type === 'file'">
         <my-file-select></my-file-select>
-    </div>
+    </div> -->
 
 </body>
 </html>
